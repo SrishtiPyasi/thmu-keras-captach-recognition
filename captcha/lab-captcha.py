@@ -124,7 +124,8 @@ hist = model.fit(train_datas, train_labels, epochs=EPOCHS, batch_size=BS, verbos
 
 #saving the best accuracy
 model = load_model(filename+'.h5')
-model.save(filename+'.val_acc.('+str(round(hist.history['val_accuracy'][-6]*100, 2))+').h5')
+filename = filename+'.val_acc.('+str(round(hist.history['val_accuracy'][-6]*100, 2))+')'
+model.save(filename+'.h5')
 
 predict_labels = model.predict(test_datas,batch_size=BS)
 test_size = len(test_labels)
