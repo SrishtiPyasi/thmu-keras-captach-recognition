@@ -1,0 +1,8 @@
+# Mac
+.DS_Store
+
+# Python
+__pycache__
+
+*.code-workspace
+
