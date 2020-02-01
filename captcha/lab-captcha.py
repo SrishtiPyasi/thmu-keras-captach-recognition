@@ -10,7 +10,8 @@ import os
 import random
 import numpy as np
 import PIL
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 from keras.callbacks import ModelCheckpoint, EarlyStopping
 from keras.optimizers import Adam
 
